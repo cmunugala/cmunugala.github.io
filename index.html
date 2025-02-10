@@ -1,21 +1,131 @@
 <!DOCTYPE html>
-<html lang='en'>
-
-    <head>
-        
-
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Che's Bagel Bar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f1e5;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #ff6200, #ffd700);
+            color: white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: url('bagel-bg.jpg') no-repeat center center/cover;
+            color: white;
+        }
+        .cta {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ff6200;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        .menu, .about, .contact {
+            text-align: center;
+            padding: 50px;
+        }
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .item {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cta = document.querySelector(".cta");
+            cta.addEventListener("mouseover", function() {
+                cta.style.background = "#ff4500";
+            });
+            cta.addEventListener("mouseout", function() {
+                cta.style.background = "#ff6200";
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">Che's Bagel Bar</div>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <body>
-      
-      Welcome!
-      <br>
-      <br>
-      Submit an image below:
-        <br>
-        <br>
-        <input type="file" accept="image/*" />
-      
-    </body>
-
+    <section class="hero">
+        <h1>Where New York Bagels Meet Indian Spices</h1>
+        <p>Experience the perfect fusion of classic bagels with bold Indian flavors.</p>
+        <a href="#menu" class="cta">Explore the Menu</a>
+    </section>
+    
+    <section id="menu" class="menu">
+        <h2>Our Specialties</h2>
+        <div class="menu-items">
+            <div class="item">Tandoori Chicken Bagel</div>
+            <div class="item">Curry Cream Cheese</div>
+            <div class="item">Masala Everything Bagel</div>
+            <div class="item">Chai-Spiced Latte</div>
+        </div>
+    </section>
+    
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At Che's Bagel Bar, we blend the tradition of handcrafted New York bagels with the rich, aromatic spices of India. Every bite tells a story.</p>
+    </section>
+    
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <p>Visit us in downtown or order online for a taste of the fusion revolution.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Che's Bagel Bar. All Rights Reserved.</p>
+    </footer>
+</body>
 </html>
